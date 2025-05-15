@@ -1,5 +1,6 @@
 - hosts: localhost
   become: true
+  gather_facts: no
   tasks:
   - name: Install htop
     dnf: name=htop
@@ -15,6 +16,12 @@
 
   - name: Install Chrome
     dnf: name=google-chrome-stable
+
+  - name: Install npm
+    dnf: name=nodejs-npm
+
+  - name: Install tldr globally with npm
+    ansible.builtin.command: npm install -g tldr
 
 #  - name: Set Git global user name
 #    ansible.builtin.git_config:
