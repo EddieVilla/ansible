@@ -13,6 +13,9 @@
   - name: Install gcc-g++
     dnf: name=gcc-g++
 
+  - name: Install Chrome
+    dnf: name=google-chrome-stable
+
 #  - name: Set Git global user name
 #    ansible.builtin.git_config:
 #      name: user.name
