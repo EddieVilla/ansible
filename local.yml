@@ -4,3 +4,24 @@
   - name: Install htop
     dnf: name=htop
 
+  - name: Install vim
+    dnf: name=vim-enhanced
+
+  - name: Install gcc
+    dnf: name=gcc
+
+  - name: Install gcc-g++
+    dnf: name=gcc-g++
+
+#  - name: Set Git global user name
+#    ansible.builtin.git_config:
+#      name: user.name
+#      value: "Eddie Villa"
+#      scope: global
+#
+#  - name: Set Git global user email
+#    ansible.builtin.git_config:
+#      name: user.email
+#      value: "eddie20villa@gmail.com"
+#      scope: global
+#
