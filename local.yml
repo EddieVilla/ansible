@@ -11,6 +11,9 @@
   - name: Install gcc
     dnf: name=gcc
 
+  - name: Install gdb
+    dnf: name=gdb
+
   - name: Install gcc-g++
     dnf: name=gcc-g++
 
