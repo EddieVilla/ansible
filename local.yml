@@ -14,9 +14,6 @@
   - name: Install gcc-g++
     dnf: name=gcc-g++
 
-  - name: Install Chrome
-    dnf: name=google-chrome-stable
-
   - name: Install npm
     dnf: name=nodejs-npm
 
