@@ -15,14 +15,23 @@
     - name: Install htop
       dnf: name=htop
 
+    - name: Install fish
+      dnf: name=fish
+
     - name: Install gdb
       dnf: name=gdb
 
     - name: Install gcc
       dnf: name=gcc
 
+    - name: Install valgrind
+      dnf: name=valgrind
+
     - name: Install gcc-g++
       dnf: name=gcc-g++
+
+    - name: Install github cli
+      dnf: name=gh
 
     - name: Install Chrome
       dnf: name=google-chrome-stable
