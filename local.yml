@@ -1,27 +1,37 @@
-- hosts: localhost
+- name: Install packages
+  hosts: localhost
   become: true
-  gather_facts: no
+  # keep gather facts true. so it will warn if you forgot to prepend w/sudo
   tasks:
-  - name: Install htop
-    dnf: name=htop
+    - name: Install vim-enhanced
+      ansible.builtin.dnf:
+        name: vim-enhanced
+        state: present
+        use_backend: dnf4  # or dnf4 depending on your system
 
-  - name: Install vim
-    dnf: name=vim-enhanced
+    - name: Install emacs
+      dnf: name=emacs
 
-  - name: Install gcc
-    dnf: name=gcc
+    - name: Install htop
+      dnf: name=htop
 
-  - name: Install gdb
-    dnf: name=gdb
+    - name: Install gdb
+      dnf: name=gdb
 
-  - name: Install gcc-g++
-    dnf: name=gcc-g++
+    - name: Install gcc
+      dnf: name=gcc
 
-  - name: Install npm
-    dnf: name=nodejs-npm
+    - name: Install gcc-g++
+      dnf: name=gcc-g++
 
-  - name: Install tldr globally with npm
-    ansible.builtin.command: npm install -g tldr
+    - name: Install Chrome
+      dnf: name=google-chrome-stable
+
+    - name: Install npm
+      dnf: name=nodejs-npm
+
+    - name: Install tldr globally with npm
+      ansible.builtin.command: npm install -g tldr
 
 #  - name: Set Git global user name
 #    ansible.builtin.git_config:
