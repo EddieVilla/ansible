@@ -15,3 +15,9 @@ Open Keyboard > Touchpad > Scrolling > Traditional
 ### Window snapping
 
 If on gnome, install gtile
+
+## RHEL
+
+To get started on a red hat system:
+
+`subscription-manager register`
