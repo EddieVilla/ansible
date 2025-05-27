@@ -11,3 +11,7 @@ then open Tweaks in Activities and go to Keyboard > Caps Lock Behavior > Treat C
 ### Touchpad scroll direction
 
 Open Keyboard > Touchpad > Scrolling > Traditional
+
+### Window snapping
+
+If on gnome, install gtile
