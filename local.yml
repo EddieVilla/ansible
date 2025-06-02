@@ -42,6 +42,27 @@
     - name: Install npm
       dnf: name=npm
 
+    - name: Install yum-utils
+      yum: name=yum-utils
+
+    - name: Add ripgrep COPR repository
+      yum_repository:
+        name: shassard-ripgrep
+        description: COPR repo for ripgrep by shassard
+        file: shassard-ripgrep
+        baseurl: https://copr.fedorainfracloud.org/coprs/shassard/ripgrep/repo/epel-9/shassard-ripgrep-epel-9.repo
+        enabled: yes
+        gpgcheck: no
+
+    - name: Update all packages using yum
+      become: true
+      yum:
+        name: '*'
+        state: latest
+
+    - name: Install ripgrep
+      yum: name=ripgrep
+
     # for f40
     - name: Install npm
       dnf: name=nodejs-npm
