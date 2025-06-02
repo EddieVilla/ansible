@@ -3,20 +3,20 @@
   become: true
   # keep gather facts true. so it will warn if you forgot to prepend w/sudo
   tasks:
-    - name: Install vim-enhanced
-      ansible.builtin.dnf:
-        name: vim-enhanced
-        state: present
-        use_backend: dnf4  # or dnf4 depending on your system
+    #    - name: Install vim-enhanced
+    #      ansible.builtin.dnf:
+    #        name: vim-enhanced
+    #        state: present
+    #        use_backend: dnf4  # or dnf4 depending on your system
+
+    - name: Install vim
+      dnf: name=vim-enhanced
+
+    - name: Install tmux
+      dnf: name=tmux
 
     - name: Install emacs
       dnf: name=emacs
-
-    - name: Install htop
-      dnf: name=htop
-
-    - name: Install fish
-      dnf: name=fish
 
     - name: Install gdb
       dnf: name=gdb
@@ -27,20 +27,40 @@
     - name: Install valgrind
       dnf: name=valgrind
 
+    #f for f40
     - name: Install gcc-g++
       dnf: name=gcc-g++
+
+    # for rhel9
+    - name: Install gcc-c++
+      dnf: name=gcc-c++
+
+    # for rhel9
+    - name: Install node
+      dnf: name=nodejs
+
+    - name: Install npm
+      dnf: name=npm
+
+    # for f40
+    - name: Install npm
+      dnf: name=nodejs-npm
+
+    # f40 only
+    - name: Install tldr globally with npm
+      ansible.builtin.command: npm install -g tldr
+
+    - name: Install htop
+      dnf: name=htop
+
+    - name: Install fish
+      dnf: name=fish
 
     - name: Install github cli
       dnf: name=gh
 
     - name: Install Chrome
       dnf: name=google-chrome-stable
-
-    - name: Install npm
-      dnf: name=nodejs-npm
-
-    - name: Install tldr globally with npm
-      ansible.builtin.command: npm install -g tldr
 
 #  - name: Set Git global user name
 #    ansible.builtin.git_config:
@@ -54,3 +74,6 @@
 #      value: "eddie20villa@gmail.com"
 #      scope: global
 #
+#  # GUI only
+#  - name: Gnome tweaks
+#    dnf: name=gnome-tweaks
