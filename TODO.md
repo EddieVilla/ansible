@@ -9,3 +9,5 @@
 - fish
 
 - htop
+
+- charmbracelet/glow
