@@ -1,3 +1,7 @@
+# NEW
+
+ansible-playbook -i inventory.ini i3.yml
+
 # Manual install things
 
 # OLD

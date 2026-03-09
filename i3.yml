@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+    - name: Ensure i3 config directory exists
+      ansible.builtin.file:
+        path: "{{ ansible_env.HOME }}/.config/i3"
+        state: directory
+        mode: "0755"
+
+    - name: Install i3 config
+      ansible.builtin.copy:
+        src: files/i3_config
+        dest: "{{ ansible_env.HOME }}/.config/i3/config"
+        mode: "0644"
