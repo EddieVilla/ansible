@@ -5,6 +5,7 @@ ansible-playbook -i inventory.ini i3.yml
 # Manual install things
 
 install bitwarden extension in firefox
+install pycharm
 
 # OLD
 
