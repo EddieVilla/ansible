@@ -6,6 +6,7 @@ ansible-playbook -i inventory.ini i3.yml
 
 install bitwarden extension in firefox
 install pycharm
+setup up github ssh key
 
 # OLD
 
