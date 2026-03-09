@@ -4,13 +4,18 @@ ansible-playbook -i inventory.ini i3.yml
 
 # Manual install things
 
-lay down tmux.conf like i did ~/.config/i3/config
-lay down .vimrc like i did ~/.config/i3/config
+lay down tmux.conf like i did ~/.config/i3/config. for now, just use gh gist list and gh gist clone
+lay down .vimrc like i did ~/.config/i3/config. same as above
 lay down firefox policies like i did ~/.config/i3/config
 lay down i3status bar policies like i did ~/.config/i3/config
 install bitwarden extension in firefox
 install pycharm
-setup up github ssh key
+setup up github ssh key. or instead, set up gh cli tool.
+install google-chrome
+
+# packages to add to list of things to install
+
+gh
 
 # OLD
 
