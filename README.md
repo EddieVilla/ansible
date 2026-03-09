@@ -1,5 +1,7 @@
 # Manual install things
 
+# OLD
+
 ## Fedora
 
 ### Caps to Ctrl
