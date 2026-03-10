@@ -11,3 +11,9 @@
         src: files/i3_config
         dest: "{{ ansible_env.HOME }}/.config/i3/config"
         mode: "0644"
+
+    - name: Install tmux config
+      ansible.builtin.copy:
+        src: files/tmux.conf
+        dest: "{{ ansible_env.HOME }}/.tmux.conf"
+        mode: "0644"
