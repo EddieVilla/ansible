@@ -1,0 +1,14 @@
+- name: Install tmux on Debian 13
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install tmux
+      ansible.builtin.apt:
+        name: tmux
+        state: present

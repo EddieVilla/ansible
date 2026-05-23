@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+    - name: Install tmux config
+      ansible.builtin.copy:
+        src: files/tmux.conf
+        dest: "{{ ansible_env.HOME }}/.tmux.conf"
+        mode: "0644"
+
+    - name: Install vimrc config
+      ansible.builtin.copy:
+        src: files/vimrc
+        dest: "{{ ansible_env.HOME }}/.vimrc"
+        mode: "0644"
