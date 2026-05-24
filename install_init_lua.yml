@@ -1,0 +1,17 @@
+---
+- name: Configure Neovim init.lua
+  hosts: all
+
+  tasks:
+    - name: Ensure Neovim config directory exists
+      ansible.builtin.file:
+        path: "{{ ansible_env.HOME }}/.config/nvim"
+        state: directory
+        mode: "0755"
+
+    - name: Create init.lua if it does not exist
+      ansible.builtin.copy:
+        src: files/init.lua
+        dest: "{{ ansible_env.HOME }}/.config/nvim/init.lua"
+        mode: "0644"
+        force: false

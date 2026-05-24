@@ -1,0 +1,9 @@
+- name: Install Claude Code
+  hosts: all
+
+  tasks:
+    - name: Download and run Claude Code install script
+      ansible.builtin.shell:
+        cmd: curl -fsSL https://claude.ai/install.sh | bash
+      args:
+        creates: /usr/local/bin/claude

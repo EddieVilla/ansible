@@ -1,0 +1,14 @@
+- name: Install Neovim
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install Neovim
+      ansible.builtin.apt:
+        name: neovim
+        state: present
